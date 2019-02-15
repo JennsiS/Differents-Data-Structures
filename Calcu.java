@@ -16,7 +16,7 @@ public class Calcu implements Calculator {
      * @param op
      * @return retorna el resultado de cualquiera de las operaciones que realice segun sea el caso
      */
-    
+
   /*  @Override
     public int Calculate(int num1, int num2, String op) {
        int resultado =0;
@@ -35,9 +35,9 @@ public class Calcu implements Calculator {
        return resultado;
     }
    */
-    
-    
-    
+
+
+
     public static Calcu getInstance() {
         return CalcuHolder.INSTANCE;
     }
@@ -46,10 +46,10 @@ public class Calcu implements Calculator {
     public double calculate(String expresion) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
     private static class CalcuHolder {
 
         private static final Calcu INSTANCE = new Calcu();
     }
-    
+
 }

@@ -14,13 +14,13 @@ public class CircularList<E> extends AbstractList<E>{
     /**
      *
      */
-    protected Node<E> tail; 
+    protected Node<E> tail;
 
     /**
      *
      */
     protected int count;
-    
+
     /**
      * Constructor de la clase
      */
@@ -29,22 +29,22 @@ public class CircularList<E> extends AbstractList<E>{
         tail = null;
         count = 0;
     }
-    
+
     /**
      * método para agregar al inicio
      * @param value un genérico
      */
     @Override
     public void addFirst(E value) {
-       Node<E> temp = new Node<E>(value);
-       if(tail == null){
-           tail = temp;
-           tail.setNext(tail);
-       }else{
-           temp.setNext(tail.next());
-           tail.setNext(temp);
-       }
-       count++;
+        Node<E> temp = new Node<E>(value);
+        if(tail == null){
+            tail = temp;
+            tail.setNext(tail);
+        }else{
+            temp.setNext(tail.next());
+            tail.setNext(temp);
+        }
+        count++;
     }
     /**
      * método para agregar al tail
@@ -52,8 +52,8 @@ public class CircularList<E> extends AbstractList<E>{
      */
     @Override
     public void addLast(E value) {
-       addFirst(value);
-       tail = tail.next();
+        addFirst(value);
+        tail = tail.next();
     }
     /**
      * método para remover el primer elemento
@@ -90,7 +90,7 @@ public class CircularList<E> extends AbstractList<E>{
      */
     @Override
     public void push(E item) {
-       addFirst(item);
+        addFirst(item);
     }
     /**
      * Retira el primer elemento de la lista lo retorna y lo borra
@@ -123,5 +123,5 @@ public class CircularList<E> extends AbstractList<E>{
     @Override
     public E getFirst() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    } 
+    }
 }

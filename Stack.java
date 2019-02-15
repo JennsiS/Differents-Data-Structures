@@ -26,7 +26,7 @@ public interface Stack<E>
      */
     public E pop();
     // pre: stack is not empty
-   
+
 
     /**
      *
@@ -41,7 +41,7 @@ public interface Stack<E>
      * @return Devuelve si la pila se encuentra vacia o no
      */
     public boolean empty();
-    
+
 
     /**
      *

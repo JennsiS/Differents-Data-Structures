@@ -1,4 +1,3 @@
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -21,27 +20,27 @@ public class Main {
      * @throws java.io.IOException
      */
     public static void main(String[] args) throws FileNotFoundException, IOException {
-   File archivo = null;
-		FileReader fr = null;
-		BufferedReader br = null;
-                Scanner sc = new Scanner(System.in);
+        File archivo = null;
+        FileReader fr = null;
+        BufferedReader br = null;
+        Scanner sc = new Scanner(System.in);
 
-		//try{
-			// Apertura del fichero y creacion de BufferedReader para poder
-			// hacer una lectura comoda (disponer del metodo readLine()).
-			archivo = new File("datos.txt");
-			fr = new FileReader(archivo);
-			br = new BufferedReader(fr);
-			
-			// Lectura del ficheroSi
-			String linea;
-			String Operacion = "";
-			while ((linea = br.readLine()) != null)
-                        Operacion = Operacion + linea;
-              
+        //try{
+        // Apertura del fichero y creacion de BufferedReader para poder
+        // hacer una lectura comoda (disponer del metodo readLine()).
+        archivo = new File("datos.txt");
+        fr = new FileReader(archivo);
+        br = new BufferedReader(fr);
+
+        // Lectura del ficheroSi
+        String linea;
+        String Operacion = "";
+        while ((linea = br.readLine()) != null)
+            Operacion = Operacion + linea;
 
 
-       // Factory factory = new Factory();
+
+        // Factory factory = new Factory();
 
         Scanner scan = new Scanner(System.in);
 
@@ -76,13 +75,12 @@ public class Main {
         //factory.opcionRealizada(opcion1, opcion2);
 
         //Implementando la calculadora con el diseño singleton
-       Calcu operando= Calcu.getInstance();
-         
-   
-   
-    
-        }
-            // }catch(IOException e);
-		
-    }
+        Calcu operando= Calcu.getInstance();
 
+
+
+
+    }
+    // }catch(IOException e);
+
+}

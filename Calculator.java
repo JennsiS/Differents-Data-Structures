@@ -6,7 +6,7 @@
  * <p>Interfaz de la calculadora  </p>
  * */
 public interface Calculator {
-    
+
     /**
      *
      * @param num1
@@ -14,6 +14,6 @@ public interface Calculator {
      * @param op
      * @return devuelve un valor de tipo int
      */
-   double calculate(String expresion);
-    
+    double calculate(String expresion);
+
 }

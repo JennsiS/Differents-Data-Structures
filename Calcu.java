@@ -7,49 +7,92 @@
  * */
 
 public class Calcu implements Calculator {
-    private Calcu(){
-    }
+
+
+    //Primera instancia para el singleton
+    public static Calcu firstInstance = null;
+
+    public Calcu(){}
     /**
-     *
-     * @param num1
-     * @param num2
-     * @param op
-     * @return retorna el resultado de cualquiera de las operaciones que realice segun sea el caso
+     * metodo calcular. se utiliza para poder realizar operaciones escritas en postfix
+     * @param esp
+     * @return Valor de la operacion realizada
      */
+    public String calculate(String esp){
 
-  /*  @Override
-    public int Calculate(int num1, int num2, String op) {
-       int resultado =0;
-       if (op.equals ("+")){
-           resultado= num1+num2;
-       }
-       if (op.equals ("-")){
-           resultado= num2-num1;
-       }
-       if (op.equals ("*")){
-           resultado = num1*num2;
-       }
-       if (op.equals ("/")){
-           resultado = num2/num1 ;
-       }
-       return resultado;
+        //IMPORTANTE
+        //IMPORTANTE
+        //IMPORTANTE
+        //IMPORTANTE
+        //Verificador para implementar el metodo singleton
+        if(firstInstance == null){
+            firstInstance = new Calcu();
+        }
+
+        String respuesta = "";
+        StackVector<String> pila = new StackVector<String>();
+        StackVector<Integer> evaluador = new StackVector<Integer>();
+        Boolean error = false;
+
+        String[] cadena = esp.split(" ");
+        String caracter;
+
+        // Se ingresan los elementos al stack de forma inversa
+        for(int i= cadena.length - 1; i >= 0; i--){
+            caracter = cadena[i];
+            pila.push(caracter);
+        }
+
+        while (!pila.empty()) {
+            if ("0123456789".contains(pila.peek())) {
+                // Si el peek() es un numero
+                evaluador.push(Integer.parseInt(pila.pop()));
+            } else {
+                // Si no es un numero
+                caracter = pila.pop();
+                switch (caracter.charAt(0)) {
+                    case '+': {
+                        // Suma.
+                        evaluador.push((evaluador.pop() + evaluador.pop()));
+                        break;
+                    }
+                    case '-': {
+                        // Resta.
+                        evaluador.push((evaluador.pop() - evaluador.pop()));
+                        break;
+                    }
+                    case '*': {
+                        // Multiplicacion.
+                        evaluador.push((evaluador.pop() * evaluador.pop()));
+                        break;
+                    }
+                    case '/': {
+                        // Division.
+                        int numerador = evaluador.pop();
+                        int denominador = evaluador.pop();
+                        // Evaluamos si no hay un error.
+                        if (denominador != 0) {
+                            // No hay error.
+                            evaluador.push((numerador / denominador));
+                        } else {
+                            // Hay error, si el 0 esta en el denominador, no hay solucion
+                            error = true;
+                            evaluador.push(0);
+                        }
+                        break;
+                    }
+                }
+            }
+
+        }
+
+
+        if (!error) {
+            //en caso de que error = false
+            return String.valueOf( evaluador.pop() );
+        } else {
+            //en caso de que error = true (hay una division con 0 como el denominador).
+            return "Error";
+        }
     }
-   */
-
-
-
-    public static Calcu getInstance() {
-        return CalcuHolder.INSTANCE;
-    }
-
-    @Override
-    public double calculate(String expresion) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private static class CalcuHolder {
-
-        private static final Calcu INSTANCE = new Calcu();
-    }
-
-}
+} 

@@ -5,7 +5,6 @@
  * @name DoubleLinkedList.java
  * <p>Esta lista implementa los metodos que permiten crear una lista doble enlazada</p>
  * */
-import java.util.AbstractList;
 
 /**
  * @param <E>
@@ -35,8 +34,14 @@ public class DoubleLinkedList<E> extends AbstractList<E>{
     {
         head = null;
         tail = null;
-        count = 0;
+        count =0;
+       
     }
+
+    //DoubleLinkedList() {
+      //  throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    //}
+
 
     /**
      *

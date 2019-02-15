@@ -1,3 +1,4 @@
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -20,67 +21,52 @@ public class Main {
      * @throws java.io.IOException
      */
     public static void main(String[] args) throws FileNotFoundException, IOException {
-        File archivo = null;
-        FileReader fr = null;
-        BufferedReader br = null;
-        Scanner sc = new Scanner(System.in);
-
-        //try{
-        // Apertura del fichero y creacion de BufferedReader para poder
-        // hacer una lectura comoda (disponer del metodo readLine()).
-        archivo = new File("datos.txt");
-        fr = new FileReader(archivo);
-        br = new BufferedReader(fr);
-
-        // Lectura del ficheroSi
-        String linea;
-        String Operacion = "";
-        while ((linea = br.readLine()) != null)
-            Operacion = Operacion + linea;
-
-
-
-        // Factory factory = new Factory();
-
+        
+        Factory factory = new Factory();
+        String opcion1= " ";
+        String opcion2 = " ";
         Scanner scan = new Scanner(System.in);
+        while (!opcion1.equals("4")){
+        System.out.println("Desea utilizar Stack o Lista? ");
+        System.out.println("1. ArrayList");
+        System.out.println("2. StackVector");
+        System.out.println("3. Lista");
+        System.out.println("4. Salir");
+        opcion1 = scan.nextLine();
+        
 
-        System.out.println("Seleccione que tipo de implementacion desea utilizar ");
-        System.out.println("1.Stack ");
-        System.out.println("2.Lista ");
-        String opcion1 = scan.nextLine();
-        String opcion2 = null;
-
-        if (opcion1.equals("2")){
+        if (opcion1.equals("3")){
             System.out.println("Seleccione la lista que desea utilizar");
             System.out.println("1. Lista simplemente enlazada");
             System.out.println("2. Lista doblemente enlazada");
             System.out.println("3. Lista circular");
             opcion2 = scan.nextLine();
-            if (opcion2.equals("1")){}
-            if (opcion2.equals("2")){}
-            if (opcion2.equals("3")){}
-        }
-        if (opcion1.equals("1")){
-            System.out.println("Seleccione el tipo de stack que desea utilizar");
-            System.out.println("1.Lista ");
-            System.out.println("2.ArrayList ");
-            System.out.println("3.Vector");
-            opcion2 = scan.nextLine();
-            if (opcion2.equals("1")){}
-            if (opcion2.equals("2")){}
-            if (opcion2.equals("3")){}
         }
 
 
-        //factory.opcionRealizada(opcion1, opcion2);
-
-        //Implementando la calculadora con el diseño singleton
-        Calcu operando= Calcu.getInstance();
+        factory.opcionRealizada(opcion1, opcion2);
 
 
+       Calcu operando= new Calcu();
+        File opera = new File("C:datos.txt");
+        FileReader leer = new FileReader(opera);
+        BufferedReader buff = new BufferedReader(leer);
 
+        String linea;
+        while((linea = buff.readLine()) != null){
+            System.out.println(linea);
+            System.out.println("Respuesta: " + operando.calculate(linea) + "\n");
+        }
+        
+        System.out.println("Desea utilizar Stack o Lista? ");
+        System.out.println("1. ArrayList");
+        System.out.println("2. StackVector");
+        System.out.println("3. Lista");
+        System.out.println("4. Salir");
+        opcion1 = scan.nextLine();
+        }
 
+    }	
+        
     }
-    // }catch(IOException e);
 
-}

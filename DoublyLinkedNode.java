@@ -27,7 +27,7 @@ public class DoublyLinkedNode<E>{
     protected DoublyLinkedNode<E> previousElement;
 
     /**
-     *
+     *Todos los parametros utilizados son de tipo genericos
      * @param v
      * @param next
      * @param previous
@@ -43,7 +43,7 @@ public class DoublyLinkedNode<E>{
     }
 
     /**
-     *
+     *El parametro utilizado es de tipo generico
      * @param v
      */
     public DoublyLinkedNode(E v){

@@ -14,13 +14,13 @@ public class CircularList<E> extends AbstractList<E>{
     /**
      *
      */
-    protected Node<E> tail;
+    protected Node<E> tail; 
 
     /**
      *
      */
     protected int count;
-
+    
     /**
      * Constructor de la clase
      */
@@ -29,34 +29,34 @@ public class CircularList<E> extends AbstractList<E>{
         tail = null;
         count = 0;
     }
-
+    
     /**
-     * método para agregar al inicio
-     * @param value un genérico
+     * método que tiene como funcion agregar un elemento al incio
+     * @param value un valor de tipo generico 
      */
     @Override
     public void addFirst(E value) {
-        Node<E> temp = new Node<E>(value);
-        if(tail == null){
-            tail = temp;
-            tail.setNext(tail);
-        }else{
-            temp.setNext(tail.next());
-            tail.setNext(temp);
-        }
-        count++;
+       Node<E> temp = new Node<E>(value);
+       if(tail == null){
+           tail = temp;
+           tail.setNext(tail);
+       }else{
+           temp.setNext(tail.next());
+           tail.setNext(temp);
+       }
+       count++;
     }
     /**
-     * método para agregar al tail
-     * @param value un genérico para el tail
+     * método que agrega un elemento al final de la lista
+     * @param value de tipo generico
      */
     @Override
     public void addLast(E value) {
-        addFirst(value);
-        tail = tail.next();
+       addFirst(value);
+       tail = tail.next();
     }
     /**
-     * método para remover el primer elemento
+     * método que remueve el primer elemento
      * @return un genérico E
      */
     @Override
@@ -76,24 +76,24 @@ public class CircularList<E> extends AbstractList<E>{
         return temp.value();
     }
     /**
-     * el método contains heredado de la interfaz
-     * @param value un genérico
-     * @return un boolean con true o false
+     * Verifica si la lista tiene elementos
+     * @param value de tipo generico
+     * @return un boolean con valores true o false
      */
     @Override
     public boolean contains(E value) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     /**
-     * Método heredado de la interfaz de Stack, es para pushear un valor
-     * @param item un genérico para agregar
+     * Método heredado de la interfaz de Stack tiene como funcion ingresar un elemento en el stack
+     * @param item generico
      */
     @Override
     public void push(E item) {
-        addFirst(item);
+       addFirst(item);
     }
     /**
-     * Retira el primer elemento de la lista lo retorna y lo borra
+     * Saca el primer valor de una stack
      * @return un genérico E
      */
     @Override
@@ -123,5 +123,5 @@ public class CircularList<E> extends AbstractList<E>{
     @Override
     public E getFirst() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    } 
 }

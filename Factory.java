@@ -12,6 +12,11 @@ public class Factory {
     StackFactory pila = new StackFactory();
     FactoryList listas = new FactoryList();
 
+    /**
+     * Este metodo permite crear una stack o una lista segun sea el caso
+     * @param opcion1
+     * @param opcion2
+     */
     public void opcionRealizada(String opcion1, String opcion2){
         switch(opcion1){
             case "1":{

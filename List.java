@@ -1,3 +1,4 @@
+
 import java.util.Iterator;
 /**
  * @author Jennifer Sandoval,Andrea Paniagua
@@ -15,14 +16,14 @@ public interface List<E>
 
     /**
      *
-     * @return
+     * @return un valor de tipo int
      */
     public int size();
     // post: returns number of elements in list
 
     /**
      *
-     * @return
+     * @return un valor de tipo boolean
      */
     public boolean isEmpty();
     // post: returns true iff list has no elements
@@ -49,7 +50,7 @@ public interface List<E>
 
     /**
      *
-     * @return
+     * @return un valor de tipo generico con el primer elemento
      */
     public E getFirst();
     // pre: list is not empty
@@ -57,7 +58,7 @@ public interface List<E>
 
     /**
      *
-     * @return
+     * @return un valor de tipo generico con el ultimo elemento
      */
     public E getLast();
     // pre: list is not empty
@@ -65,7 +66,7 @@ public interface List<E>
 
     /**
      *
-     * @return
+     * @return el primer elemento y lo saca de la lista
      */
     public E removeFirst();
     // pre: list is not empty
@@ -73,7 +74,7 @@ public interface List<E>
 
     /**
      *
-     * @return
+     * @return el ultimo elemento y lo saca de la lista
      */
     public E removeLast();
     // pre: list is not empty
@@ -94,14 +95,6 @@ public interface List<E>
      */
     public void add(E value);
     // post: value is added to tail of list
-
-    /**
-     *
-     * @return
-     */
-    public E remove();
-    // pre: list has at least one element
-    // post: removes last value found in list
 
     /**
      *
@@ -172,7 +165,7 @@ public interface List<E>
     /**
      *
      * @param i
-     * @return
+     * @return retorna un valor de tipo generico
      */
     public E remove(int i);
     // pre: 0 <= i < size()
@@ -180,7 +173,7 @@ public interface List<E>
 
     /**
      *
-     * @return
+     * @return un valor de tipo generico iterador
      */
     public Iterator<E> iterator();
     // post: returns an iterator allowing

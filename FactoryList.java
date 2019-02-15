@@ -26,7 +26,7 @@ public class FactoryList {
             }
 
             case "2":{
-                nuevo = (List) new DoubleLinkedList();
+                nuevo = new DoubleLinkedList();
             }
 
             case "3":{

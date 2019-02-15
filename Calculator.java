@@ -14,6 +14,6 @@ public interface Calculator {
      * @param op
      * @return devuelve un valor de tipo int
      */
-    public int Calculate (int num1, int num2, String op);
+   double calculate(String expresion);
     
 }

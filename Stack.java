@@ -3,7 +3,7 @@
  * @Carne 18962,18733
  * @date 11/02/19
  * @name Stack.java
- * <p> </p>
+ * <p> Esta clase determina los metodos que debe tener una stack</p>
  * */
 /**
  * @param <E>

@@ -3,7 +3,7 @@
  * @Carne 18962,18733
  * @date 11/02/19
  * @name StackLista.java
- * <p> </p>
+ * <p>Esta clase implementa los metodos de la Stack para una lista</p>
  * */
 public class StackLista{
 

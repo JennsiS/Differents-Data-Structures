@@ -4,7 +4,7 @@ import java.util.ArrayList;
  * @Carne 18962,18733
  * @date 11/02/19
  * @name StackVector.java
- * <p> </p>
+ * <p> Esta clase implementa los metodos de Stack para un vector</p>
  * */
 /**
  * @param <E>

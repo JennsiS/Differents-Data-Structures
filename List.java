@@ -5,7 +5,7 @@ import java.util.Iterator;
  * @Carne 18962,18733
  * @date 11/02/19
  * @name List.java
- * <p> </p>
+ * <p>Esta clase determina los metodos que debe tener una lista </p>
  * */
 
 /**

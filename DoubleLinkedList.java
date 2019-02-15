@@ -3,13 +3,11 @@
  * @Carne 18962,18733
  * @date 11/02/19
  * @name DoubleLinkedList.java
- * <p> </p>
+ * <p>Esta lista implementa los metodos que permiten crear una lista doble enlazada</p>
  * */
 import java.util.AbstractList;
 
 /**
- *
- * @author bff_n_000
  * @param <E>
  */
 public class DoubleLinkedList<E> extends AbstractList<E>{

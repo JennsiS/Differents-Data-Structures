@@ -4,7 +4,7 @@ import java.util.ArrayList;
  * @Carne 18962,18733
  * @date 11/02/19
  * @name StackArrayList.java
- * <p> </p>
+ * <p> Esta clase implementa los metodos de una Stack para un arraylist</p>
  * */
 /**
  * @param <E>

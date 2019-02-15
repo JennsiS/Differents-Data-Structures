@@ -5,7 +5,7 @@ import java.util.Iterator;
  * @Carne 18962,18733
  * @date 11/02/19
  * @name AbstractList.java
- * <p> </p>
+ * <p>Esta clase es una clase abstracta que implementa los metodos de la lista </p>
  * */
 public abstract class AbstractList<E> implements List<E>,Stack<E> {
 

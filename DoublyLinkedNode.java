@@ -3,7 +3,7 @@
  * @Carne 18962,18733
  * @date 11/02/19
  * @name DoublyLinkedNode.java
- * <p> </p>
+ * <p> Esta clase permite hacer referencia a los elementos siguientes en una lista de doble enlace </p>
  * */
 
 /**

@@ -3,7 +3,7 @@
  * @Carne 18962,18733
  * @date 11/02/19
  * @name Node.java
- * <p> </p>
+ * <p> Esta clase permite hacer referencia al siguiente elemento de una lista simple </p>
  * */
 /**
  * @param <E>
